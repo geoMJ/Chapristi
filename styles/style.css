@@ -1,0 +1,335 @@
+/* Polices */
+
+@import url("https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Golos+Text:wght@400..900&display=swap");
+
+/* Général */
+
+:root {
+    --color-accent: #22333b;
+    --color-primary: #5e503f;
+    --color-primary-var-light: #e5d7c6;
+    --color-primary-var-dark: #251706;
+    --color-neutral-light: #ffffff;
+    --color-neutral-dark: #0a0908;
+    --color-neutral-medium: #e4e8e6;
+    --font-headings: "Unbounded", "sans-serif";
+    --font-main: "Golos Text", "Inter", "sans-serif";
+}
+
+*:not(h1, h2, h3, h4, h5, p, img) {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: none;
+    border: none;
+}
+
+.th-dark {
+    background-color: var(--color-neutral-dark);
+    color: var(--color-neutral-light);
+}
+.th-light {
+    background-color: var(--color-neutral-light);
+    color: var(--color-neutral-dark);
+}
+.th-primary {
+    background-color: var(--color-primary);
+    color: var(--color-neutral-light);
+}
+
+.th-primary-lighter {
+    background-color: var(--color-primary-var-light);
+    color: var(--color-neutral-dark);
+}
+
+body {
+    font-family: var(--font-main);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: var(--font-headings);
+    font-weight: 700;
+}
+
+h1 {
+    font-size: 4rem;
+}
+h2 {
+    font-size: 3rem;
+}
+h3 {
+    font-size: 2.5rem;
+}
+
+p {
+    max-width: 600px;
+    line-height: 1.5em;
+    font-size: 1.2rem;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.flex.row {
+    flex-direction: row;
+}
+
+.col {
+    flex: 1;
+}
+
+section {
+    min-height: 80vh;
+}
+
+.container {
+    padding: 3rem 2rem;
+    gap: 4rem;
+}
+
+.container > div {
+    width: 100%;
+    max-width: 1080px;
+}
+
+/* Navigation */
+
+.navbar {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 2rem;
+}
+
+.menu-toggle {
+    position: absolute;
+    top: 0;
+    right: 2rem;
+    cursor: pointer;
+    width: 4rem;
+    height: 4rem;
+    background: url("/assets/icones/patte-menu.svg");
+    background-size: cover;
+    transition: all 0.5s;
+}
+
+.menu-toggle:hover:not(.opened) {
+    transform: translateY(1rem);
+}
+
+.menu-toggle:not(.opened):hover + .main-menu:not(.opened) {
+    height: 1.25rem;
+}
+
+.main-menu {
+    list-style: none;
+    display: flex;
+    position: absolute;
+    flex-wrap: nowrap;
+    inset: 0;
+    height: 0;
+    color: var(--color-primary-var-dark);
+    background-color: var(--color-primary-var-light);
+    transition: all 0.5s;
+}
+
+.main-menu.opened {
+    height: 10rem;
+}
+.menu-toggle.opened {
+    transform: translateY(9.75rem);
+}
+
+.main-menu li {
+    padding: 2rem;
+}
+
+/* Accueil */
+
+.hero h2 {
+    color: var(--color-primary-var-light);
+}
+
+.author-portrait {
+    width: 44%;
+}
+
+.posts-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1.25rem;
+}
+
+.home-post-preview {
+    position: relative;
+    background-color: var(--color-primary-var-light);
+    padding-top: 100%;
+    height: 100%;
+    border-radius: 1.2rem;
+    text-align: center;
+}
+
+.home-post-preview::before {
+    position: absolute;
+    display: block;
+    content: "";
+    inset: 0 0 0 0;
+    background-color: var(--color-primary);
+    background-image: url("/articles/tais-toi-et-mange-tes-croquettes/croquettes.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: luminosity;
+    border-radius: 1.2rem;
+    transition: all 0.5s;
+}
+
+.home-post-preview::after {
+    position: absolute;
+    display: block;
+    content: "";
+    inset: 0 0 0 0;
+    background-color: var(--color-primary-var-dark);
+    filter: hue-rotate(-10deg);
+    opacity: 0.5;
+    border-radius: 1.2rem;
+}
+
+.home-post-preview-title {
+    color: var(--color-primary-var-light);
+    position: absolute;
+    top: 36%;
+    width: 100%;
+    z-index: 100;
+    opacity: 0.8;
+    transition: all 0.5;
+}
+
+.home-post-preview:hover {
+    cursor: pointer;
+}
+
+.home-post-preview:hover .home-post-preview-title {
+    opacity: 1;
+}
+
+.home-post-preview:hover::before {
+    filter: brightness(0.4);
+    transition: all 0.5s;
+}
+
+.about {
+    gap: 2rem;
+    text-align: justify;
+}
+
+.about > * {
+    align-items: flex-start;
+    padding: 3rem;
+    gap: 2.25rem;
+}
+
+.presentation {
+    font-size: 1.5rem;
+}
+
+.posts-page-preview,
+.preview-wrapper {
+    gap: 4rem;
+}
+
+.preview-img {
+    position: relative;
+    overflow: hidden;
+    width: 12rem;
+    height: 12rem;
+}
+
+.preview-img img {
+    position: absolute;
+    right: -25%;
+    bottom: 0;
+    filter: sepia(0.2);
+}
+
+/* Articles */
+
+.blog-post {
+    align-items: flex-start;
+    padding: 3rem;
+}
+
+.post-header {
+    position: relative;
+    width: 100%;
+    height: 28rem;
+    overflow: hidden;
+    margin-bottom: 1rem;
+}
+
+.post-header img {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    filter: sepia(0.2);
+}
+
+/* Footer */
+
+footer {
+    height: 50vh;
+    color: var(--color-primary-var-dark);
+}
+
+/* Mobile-first design : Media Queries */
+
+@media only screen and (min-width: 768px) {
+    .container {
+        padding: 6.25rem;
+    }
+
+    .navbar {
+        padding: 0 6.25rem;
+    }
+
+    .menu-toggle {
+        display: none;
+    }
+    .main-menu {
+        position: relative;
+        flex-direction: row;
+        color: var(--color-neutral-light);
+        height: auto;
+        background: none;
+    }
+
+    .main-menu a:hover {
+        color: var(--color-primary-var-light);
+    }
+
+    .posts-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .home-post-preview,
+    .home-post-preview::before,
+    .home-post-preview::after {
+        border-radius: 2rem;
+    }
+
+    .home-post-preview-title {
+        width: 90%;
+    }
+}
