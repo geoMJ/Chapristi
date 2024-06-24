@@ -111,9 +111,15 @@ section {
 /* Navigation */
 
 .navbar {
+    position: relative;
     flex-direction: row;
     justify-content: space-between;
     padding: 2rem;
+}
+
+.logo {
+    position: absolute;
+    height: 4rem;
 }
 
 .menu-toggle {
@@ -319,12 +325,46 @@ section {
     border-radius: 1rem;
 }
 
+/* Formulaire de contact */
+
+.contact-form {
+    width: 80%;
+    align-items: flex-start;
+    padding: 4rem 0;
+}
+
+.contact-form input {
+    width: 100%;
+    background: #1b1b1b;
+    height: 1rem;
+    padding: 1rem;
+    margin: 1rem 0;
+}
+
+.contact-form button {
+    border-radius: 1rem;
+    background-color: var(--color-primary-var-light);
+    padding: 1rem;
+}
 /* Footer */
 
 footer {
+    position: relative;
     height: 50vh;
     color: var(--color-primary-var-dark);
     border-top: 1px dotted var(--color-accent);
+}
+
+footer::before {
+    position: absolute;
+    inset: 0;
+    content: "";
+    width: 95%;
+    height: 88%;
+    margin: auto;
+    border-radius: 2rem;
+    background-image: url("/assets/images/paw-pattern.svg");
+    filter: opacity(0.05) ;
 }
 
 /* Mobile-first design : Media Queries */
@@ -347,6 +387,10 @@ footer {
 
     .navbar {
         padding: 0 6.25rem;
+    }
+
+    .logo {
+        top: 58%;
     }
 
     .menu-toggle {
@@ -381,9 +425,9 @@ footer {
     .home-post-preview-title {
         width: 90%;
     }
-}
 
-@media only screen and (min-width: 1080px) {
-    .home-post-preview-title {
+    .contact-form {
+        width: 60%;
     }
+
 }

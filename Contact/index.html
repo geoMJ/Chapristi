@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="../styles/style.css" />
+        <title>Chapristi !</title>
+    </head>
+    <body>
+        <header>
+            <nav class="navbar flex row th-dark">
+                <img class="logo" alt="logo" />
+                <button
+                    class="menu-toggle"
+                    id="menu-toggle"
+                    title="Menu"
+                ></button>
+                <ul class="main-menu flex" id="main-menu">
+                    <li><a href="/articles/">Articles</a></li>
+                    <li><a href="/Contact/">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <section class="form-container flex col th-dark">
+                <h2>Me contacter</h2>
+                <form class="contact-form flex col">
+                    <label for="nom">Votre nom</label>
+                    <input type="text" id="nom" />
+                    <label for="email">Votre e-mail</label>
+                    <input type="text" id="email" />
+                    <label for="sujet">Le sujet de votre message</label>
+                    <input type="text" id="sujet" />
+                    <label for="message">Votre message</label>
+                    <textarea id="message" rows="5" cols="5"></textarea>
+                    <button type="submit">Envoyer</button>
+                </form>
+            </section>
+        </main>
+        <footer class="container flex">
+            <p>@ 2024 Chapristi</p>
+        </footer>
+        <script src="scripts/script.js"></script>
+    </body>
+</html>
