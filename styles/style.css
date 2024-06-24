@@ -158,6 +158,7 @@ section {
 
 .main-menu.opened {
     height: 10rem;
+    border-bottom: 1px dotted var(--color-primary);
 }
 .menu-toggle.opened {
     transform: translateY(9.75rem);
