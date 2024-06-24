@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,7 +9,14 @@
     <body>
         <header>
             <nav class="navbar flex row th-dark">
-                <img class="logo" alt="logo" />
+                <a href="/" title="Accueil">
+                    <img
+                        src="assets/icones/chat-assis.svg"
+                        class="logo"
+                        alt="logo"
+                    />
+                </a>
+
                 <button
                     class="menu-toggle"
                     id="menu-toggle"
@@ -36,16 +43,38 @@
             <section class="container last-posts flex th-primary">
                 <h3>Mes dernières chroniques</h3>
                 <div class="posts-grid">
-                    <div class="home-post-preview flex">
-                        <h3 class="home-post-preview-title">Tais-toi et mange tes croquettes</h3>
-                    </div>
-                    <div class="home-post-preview"></div>
-                    <div class="home-post-preview"></div>
-                    <div class="home-post-preview"></div>
+                    <a href="articles/tais-toi-et-mange-tes-croquettes/"
+                        ><div class="home-post-preview flex" id="prev-1">
+                            <h3 class="home-post-preview-title">
+                                Tais-toi et mange tes croquettes
+                            </h3>
+                        </div>
+                    </a>
+                    <a href="articles/songe-de-printemps/"
+                        ><div class="home-post-preview flex" id="prev-2">
+                            <h3 class="home-post-preview-title">
+                                Songe de printemps
+                            </h3>
+                        </div>
+                    </a>
+                    <a href="articles/se-cultiver-par-l-humain/"
+                        ><div class="home-post-preview flex" id="prev-3">
+                            <h3 class="home-post-preview-title">
+                                Se cultiver par l'humain : des ressources à gogo
+                            </h3>
+                        </div>
+                    </a>
+                    <a href="articles/bonjour-les-vacances/"
+                        ><div class="home-post-preview flex" id="prev-4">
+                            <h3 class="home-post-preview-title">
+                                Bonjour les vacances !
+                            </h3>
+                        </div>
+                    </a>
                 </div>
             </section>
-            <section class="container about flex th-light">
-                <div class="flex presentation">
+            <section class="container about flex col th-light">
+                <div class="flex col presentation">
                     <h3>Il était une fois neuf vies...</h3>
                     <p>
                         Contempler un lever de soleil sur la nature délicate,
@@ -62,7 +91,7 @@
                         aux griffes de ma jeunesse !
                     </p>
                 </div>
-                <div class="flex">
+                <div class="flex col">
                     <h3>Un autre sous titre sympa</h3>
                     <p>
                         Voluptate eiusmod ut nostrud eu ullamco irure. Excepteur
@@ -76,8 +105,6 @@
                     </p>
                 </div>
             </section>
-            <section class="container"></section>
-            <section class="container"></section>
         </main>
         <footer class="container flex">
             <p>@ 2024 Chapristi</p>

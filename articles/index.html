@@ -1,15 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="../styles/style.css" />
-        <title>Chapristi !</title>
+        <title>Articles</title>
     </head>
     <body>
         <header>
             <nav class="navbar flex row th-dark">
-                <a href="/" title="Accueil"><img class="logo" alt="logo" /></a>
+                <a href="/" title="Accueil"
+                    ><img
+                        src="../assets/icones/chat-assis.svg "
+                        class="logo"
+                        alt="logo"
+                /></a>
                 <button
                     class="menu-toggle"
                     id="menu-toggle"
@@ -17,13 +22,16 @@
                 ></button>
                 <ul class="main-menu flex" id="main-menu">
                     <li><a href="/articles/">Articles</a></li>
+                    <li><a href="/Contact">Contact</a></li>
                     <li><a href="/Contact/">Contact</a></li>
                 </ul>
             </nav>
         </header>
         <main>
-            <section class="flex posts-page-preview th-primary-lighter">
-                <span class="preview-date">2 juin 2024</span>
+            <section
+                class="flex col container posts-page-preview th-primary-lighter"
+            >
+                <span class="preview-date">2 Juin 2024</span>
                 <div class="preview-wrapper flex row">
                     <div class="preview-text">
                         <h4>Tais-toi et mange tes croquettes</h4>
@@ -38,16 +46,88 @@
                             habitudes ! Vous l'aurez compris, il a encore tenté
                             de changer mes croquettes...
                         </p>
-                        <a href="">Lire la suite</a>
+                        <a href="tais-toi-et-mange-tes-croquettes/"
+                            >Lire la suite</a
+                        >
                     </div>
                     <div class="preview-img">
-                        <img src="./tais-toi-et-mange-tes-croquettes/croquettes.jpeg" alt="gamelle de croquettes posée sur une table" />
+                        <img
+                            src="./tais-toi-et-mange-tes-croquettes/croquettes.jpeg"
+                            alt="gamelle de croquettes posée sur une table"
+                        />
+                    </div>
+                </div>
+                <span class="preview-date">17 Mai 2024</span>
+                <div class="preview-wrapper flex row">
+                    <div class="preview-text">
+                        <h4>Songe de printemps</h4>
+                        <p>
+                            Je vous partage aujourd'hui l'un de mes derniers
+                            poèmes, inspiré d'une sieste particulièrement
+                            agréable...
+                        </p>
+                        <a href="songe-de-printemps/">Lire la suite</a>
+                    </div>
+                    <div class="preview-img">
+                        <img
+                            src="songe-de-printemps/fleurs-de-cerisier.webp"
+                            alt="des fleurs de cerisier"
+                        />
+                    </div>
+                </div>
+                <span class="preview-date">22 Avril 2024</span>
+                <div class="preview-wrapper flex row">
+                    <div class="preview-text">
+                        <h4>
+                            Se cultiver par l'humain : des ressources à gogo
+                        </h4>
+                        <p>
+                            Bien le bonjour, félins de tous bords ! Aujourd'hui,
+                            j'ai souhaité vous écrire sur un sujet que
+                            j'affectionne particulièrement : la culture. Voyez
+                            le comme une ode à la rêverie, un chemin vers la
+                            sagesse, un guide pratique. Quoi qu'il en soit, je
+                            me dois de partager avec vous mes médiums culturels
+                            humains favoris...
+                        </p>
+                        <a href="se-cultiver-par-l-humain/">Lire la suite</a>
+                    </div>
+                    <div class="preview-img">
+                        <img
+                            src="./se-cultiver-par-l-humain/livre.jpeg"
+                            alt="livre ouvert et bouquet de fleurs"
+                        />
+                    </div>
+                </div>
+                <span class="preview-date">23 mars 2024</span>
+                <div class="preview-wrapper flex row">
+                    <div class="preview-text">
+                        <h4>Bonjour les vacances !</h4>
+                        <p>
+                            Pas d'article à proprement parler pour aujourd'hui.
+                            je passe seulement vous annoncer une petite pause
+                            dans mon planning habituel.
+                        </p>
+                        <p>
+                            Les humains avaient réservé à Chamonix comme tous
+                            les ans, mais cette fois-ci, ils ont décidé de
+                            m'emmener avec eux...
+                        </p>
+                        <a href="bonjour-les-vacances/">Lire la suite</a>
+                    </div>
+                    <div class="preview-img">
+                        <img
+                            src="bonjour-les-vacances/paysage-neige.jpeg"
+                            alt="une route enneigée"
+                        />
                     </div>
                 </div>
             </section>
         </main>
-        <footer class="container flex">
+        <footer class="container flex col">
             <p>@ 2024 Chapristi</p>
+            <p><small>Images : @Pexel - Licence Creative Commons</small></p>
         </footer>
+        <script src="/scripts/script.js"></script>
     </body>
 </html>
