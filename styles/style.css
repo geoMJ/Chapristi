@@ -347,14 +347,14 @@ section {
     background-color: var(--color-primary-var-light);
     padding: 1rem;
 }
-}
 
 /*Contact*/
 
 .contact-form {
     width: 86%;
 }
-.contact-form input, .contact-form textarea {
+.contact-form input,
+.contact-form textarea {
     background: #1b1b1b;
     border-radius: 1rem;
     padding: 1rem;
@@ -378,7 +378,7 @@ footer::before {
     margin: auto;
     border-radius: 2rem;
     background-image: url("/assets/images/paw-pattern.svg");
-    filter: opacity(0.05) ;
+    filter: opacity(0.05);
 }
 
 /* Mobile-first design : Media Queries */
@@ -443,7 +443,6 @@ footer::before {
     .contact-form {
         width: 60%;
     }
-
 
     .contact-form {
         width: 44%;
