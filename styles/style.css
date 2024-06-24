@@ -348,6 +348,7 @@ section {
     border-radius: 1rem;
     background-color: var(--color-primary-var-light);
     padding: 1rem;
+    color: var(--color-neutral-dark);
 }
 /* Footer */
 
