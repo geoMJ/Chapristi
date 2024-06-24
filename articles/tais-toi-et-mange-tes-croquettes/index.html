@@ -3,13 +3,18 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="../../styles/style.css" />
+        <link rel="stylesheet" href="/styles/style.css" />
         <title>Tais-toi et mange tes croquettes</title>
     </head>
     <body>
         <header>
             <nav class="navbar flex row th-dark">
-                <a href="/" title="Accueil"><img class="logo" alt="logo" /></a>
+                <a href="/" title="Accueil"
+                    ><img
+                        src="/assets/icones/chat-assis.svg"
+                        class="logo"
+                        alt="logo"
+                /></a>
                 <button
                     class="menu-toggle"
                     id="menu-toggle"
@@ -24,8 +29,11 @@
         <main>
             <section class="post-wrapper container flex th-primary-lighter">
                 <article class="blog-post flex col">
-                    <div  class="post-header">
-                        <img src="croquettes.jpeg" alt="un bol de croquettes posé sur une table">
+                    <div class="post-header">
+                        <img
+                            src="croquettes.jpeg"
+                            alt="un bol de croquettes posé sur une table"
+                        />
                     </div>
                     <h2 class="post-title">Tais-toi et mange tes croquettes</h2>
                     <p>
@@ -81,8 +89,10 @@
                 </article>
             </section>
         </main>
-        <footer class="container flex">
+        <footer class="container flex col">
             <p>@ 2024 Chapristi</p>
+            <p><small>Images : @Pexel - Licence Creative Commons</small></p>
         </footer>
+        <script src="/scripts/script.js"></script>
     </body>
 </html>

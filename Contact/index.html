@@ -3,13 +3,18 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="../styles/style.css" />
+        <link rel="stylesheet" href="/styles/style.css" />
         <title>Chapristi !</title>
     </head>
     <body>
         <header>
             <nav class="navbar flex row th-dark">
-                <img class="logo" alt="logo" />
+                <a href="/" title="Accueil"
+                    ><img
+                        class="logo"
+                        src="/assets/icones/chat-assis.svg"
+                        alt="logo"
+                /></a>
                 <button
                     class="menu-toggle"
                     id="menu-toggle"
@@ -22,8 +27,9 @@
             </nav>
         </header>
         <main>
-            <section class="form-container flex col th-dark">
+            <section class="form-container container flex col th-dark">
                 <h2>Me contacter</h2>
+                <p>Pour prendre contact avec moi, remplissez simplement le formulaire ci-dessous. Je vous répondrai aussi vite que mes pattes me le permettent !</p>
                 <form class="contact-form flex col">
                     <label for="nom">Votre nom</label>
                     <input type="text" id="nom" />
@@ -32,7 +38,7 @@
                     <label for="sujet">Le sujet de votre message</label>
                     <input type="text" id="sujet" />
                     <label for="message">Votre message</label>
-                    <textarea id="message" rows="5" cols="5"></textarea>
+                    <textarea id="message" rows="10" cols="5"></textarea>
                     <button type="submit">Envoyer</button>
                 </form>
             </section>
