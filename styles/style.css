@@ -287,6 +287,18 @@ section {
     filter: sepia(0.2);
 }
 
+/*Contact*/
+
+.contact-form {
+    width: 86%;
+}
+.contact-form input, .contact-form textarea {
+    background: #1b1b1b;
+    border-radius: 1rem;
+    padding: 1rem;
+    width: 100%;
+}
+
 /* Footer */
 
 footer {
@@ -331,5 +343,9 @@ footer {
 
     .home-post-preview-title {
         width: 90%;
+    }
+
+    .contact-form {
+        width: 44%;
     }
 }
